@@ -8,4 +8,13 @@
     按需访问作用域较小的bean或通过Provider.get()调用对其他bean的延迟访问。在上述实例基础上做如下改变：（SimpleMovieLister）
     -->
     <!-- 如果你想要为注入的依赖项使用限定名称，则应该使用@Named，如下所示（SimpleMovieLister）-->
+
+    <!-- 3.11.2 @Named:相当于@Component-->
+    <!-- @javax.inject.Named或javax.annotation.ManagedBean可以使用下面的方式替代@Component（SimpleMovieList2）-->
+    <!-- @Component通常不指定组件名字。@Name也能这么用：(SimpleMovieList2)-->
+    <!-- 当使用@Named和@ManagedBean时，可以使用与使用Spring注解完全相同的方式使用component-scan组件扫描：（AppConfig）-->
+    <!-- 与@Component相反，JSR330@Named和JSR250ManagedBean注解是不可组合使用的。请使用Spring的stereotype model来构建自定
+    义组件注解。-->
+
+
 </beans>
